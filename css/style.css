@@ -1,0 +1,161 @@
+/* settings */
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+}
+
+img {
+  width: 100%;;
+}
+
+h1 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+button {
+  border: inherit;
+  cursor: pointer;
+}
+
+/* fonts */
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Thin'), local('RobotoThin'), local('Roboto-Thin'),
+    url('../fonts/RobotoThin.ttf') format('ttf'),
+    url('../fonts/RobotoThin.ttf') format('ttf');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Light'), local('RobotoLight'), local('Roboto-Light'),
+    url('../fonts/RobotoLight.ttf') format('ttf'),
+    url('../fonts/RobotoLight.ttf') format('ttf');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Regular'), local('RobotoRegular'), local('Roboto-Regular'),
+    url('../fonts/RobotoRegular.ttf') format('ttf'),
+    url('../fonts/RobotoRegular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Montserrat Medium'), local('MontserratMedium'), local('Montserrat-Medium'),
+    url('../fonts/MontserratMedium.ttf') format('ttf'),
+    url('../fonts/MontserratMedium.ttf') format('ttf');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat Bold'), local('MontserratBold'), local('Montserrat-Bold'),
+    url('../fonts/MontserratBold.ttf') format('ttf'),
+    url('../fonts/MontserratBold.ttf') format('ttf');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat Black'), local('MontserratBlack'), local('Montserrat-Black'),
+    url('../fonts/MontserratBlack.ttf') format('ttf'),
+    url('../fonts/MontserratBlack.ttf') format('ttf');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* variable */
+
+:root {
+  --blue-moon:  #3F2AFF;
+  --white-snow: #FFFFFF;
+}
+
+/* basic styles */
+
+.section {
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container {
+  padding: 0 165px;
+}
+
+/* header */
+
+.header {
+  background-color: var(--blue-moon);
+}
+
+.header__container {
+  justify-content: space-between;
+  padding: 28px 165px;
+}
+
+.header__logo {
+  width: 94px;
+  min-height: 21px;
+}
+
+.header__list-item:not(:last-child) {
+  margin-right: 56px;
+}
+
+.header__item-link {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: var(--white-snow);
+}
+
+
