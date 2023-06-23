@@ -113,6 +113,8 @@ button {
 :root {
   --blue-moon: #3F2AFF;
   --blue-dark: #212133;
+  --blue-black: #2E2B44;
+  --black-blue: #2E2B44;
   --white-snow: #FFFFFF;
   --white-grey: #E5E5E5;
   --grey-whiten:  #EDF0F9;
@@ -123,11 +125,13 @@ button {
 
 :root {
   --mb-small: 15px;
+  --mr-small: 15px;
   --mb-normal: 30px;
   --mr-normal: 30px;
   --mb-medium: 50px;
   --mr-medium: 56px;
   --mb-large: 70px;
+  --mr-large: 70px;
   --mb-extra-large: 80px;
 }
 
@@ -165,12 +169,13 @@ button {
   max-width: 1440px;
   margin: 0 auto;
   justify-content: space-between;
-  padding: 28px 0;
+  padding: 28px 15px;
 }
 
 .header__logo {
-  min-width: 94px;
-  min-height: 21px;
+  margin-right: var(--mr-small);
+  width: 94px;
+  height: 21px;
 }
 
 .header__list-item:not(:last-child) {
@@ -233,16 +238,29 @@ button {
 
 /* advantages section */
 
-.advantages-img {
+.advantages__article {
+  margin-bottom: var(--mb-normal);
+  align-items: flex-start;
+}
+
+.advantages__wrapper {
+  justify-content: space-between;
+  margin-right: var(--mr-large);
+}
+
+.advantages__img {
+  min-width: 160px;
+  min-height: 142px;
+  margin-right: var(--mr-normal);
   background-image: url(../img/Vectary\ texture.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.advantages-pic {
+.advantages__pic {
   min-height: 80px;
-  padding-left: 110px;
+  min-width: 80px;
 }
 
 .advantages-pic1 {
@@ -266,11 +284,19 @@ button {
   background-repeat: no-repeat;
 }
 
+.advantages__title {
+  margin-bottom: var(--mb-small);
+  color: var(--blue-black);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+}
+
 .advantages__text {
   color: var(--grey-light);
   font-weight: 700;
   font-size: 16px;
-  line-height: 120%;
+  line-height: 25px;
 }
 
 /* teachers */
@@ -318,22 +344,16 @@ button {
   color: var(--blue-dark);
 }
 
-.courses__list {
-  justify-content: space-between;
-}
-
-.courses__item {
-  padding: 0;
-  flex-shrink: 0;
-  padding-top: 180px;
-}
-
 .courses__card {
+  height: 100%;
+  background-color: var(--grey-whiten);
+  border-radius: 20px;
+}
+
+.courses__card-body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  background-color: var(--grey-whiten);
-  border-radius: 0px 0px 20px 20px;
   padding: 30px;
 }
 
@@ -353,34 +373,41 @@ button {
   line-height: 150%;
 }
 
-.courses-img1 {
-  background-image: url(../img/course\ 1.png);
-  background-position: top center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.courses-img2 {
-  background-image: url(../img/course\ 2.png);
-  background-position: top center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.courses-img3 {
-  background-image: url(../img/course\ 3.png);
-  background-position: top center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.courses-img4 {
-  background-image: url(../img/course\ 4.png);
-  background-position: top center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
 .courses__btn {
   padding: 20px 60px;
+}
+
+/* footer */
+
+.footer {
+  background-color: var(--blue-black);
+}
+
+.footer__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 28px 0;
+}
+
+.footer__list {
+  justify-content: center;
+}
+
+.footer__copy {
+  background-color: var(--white-snow);
+}
+
+.footer__txt {
+  position: relative;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: var(--black-blue);
+  text-align: center;
+}
+
+.footer__txt span {
+  color: var(--blue-moon);
+  padding: 0 5px;
 }
