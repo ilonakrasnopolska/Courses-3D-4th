@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* settings */
 
 html {
@@ -133,6 +140,7 @@ button {
   --mb-large: 70px;
   --mr-large: 70px;
   --mb-extra-large: 80px;
+  --mr-extra-large: 90px;
 }
 
 /* basic styles */
@@ -168,7 +176,9 @@ button {
 .header__container {
   max-width: 1440px;
   margin: 0 auto;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 28px 15px;
 }
 
@@ -192,6 +202,7 @@ button {
 /* hero section */
 
 .hero {
+  background: -o-radial-gradient(67.78% 55.93%, 44.07% 44.07%, #555681 0%, #212133 100%);
   background: radial-gradient(44.07% 44.07% at 67.78% 55.93%, #555681 0%, #212133 100%);
 }
 
@@ -233,19 +244,17 @@ button {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 /* advantages section */
 
 .advantages__article {
   margin-bottom: var(--mb-normal);
-  align-items: flex-start;
-}
-
-.advantages__wrapper {
-  justify-content: space-between;
-  margin-right: var(--mr-large);
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .advantages__img {
@@ -258,30 +267,8 @@ button {
   background-repeat: no-repeat;
 }
 
-.advantages__pic {
-  min-height: 80px;
-  min-width: 80px;
-}
-
-.advantages-pic1 {
-  background-image: url(../img/eye-circle.svg);
-  background-position: left;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.advantages-pic2 {
-  background-image: url(../img/fingers.svg);
-  background-position: left;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.advantages-pic3 {
-  background-image: url(../img/voise.svg);
-  background-position: left;
-  background-size: contain;
-  background-repeat: no-repeat;
+.advantages__item {
+  height: 100%;
 }
 
 .advantages__title {
@@ -290,6 +277,10 @@ button {
   font-weight: 700;
   font-size: 40px;
   line-height: 40px;
+}
+
+.adv-txt {
+  width: 75%;
 }
 
 .advantages__text {
@@ -345,16 +336,29 @@ button {
 }
 
 .courses__card {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100%;
   background-color: var(--grey-whiten);
   border-radius: 20px;
 }
 
 .courses__card-body {
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 30px;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 .courses__card-title {
@@ -390,7 +394,9 @@ button {
 }
 
 .footer__list {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .footer__copy {
