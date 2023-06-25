@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* settings */
 
 html {
@@ -124,10 +131,13 @@ button {
   --black-blue: #2E2B44;
   --white-snow: #FFFFFF;
   --white-grey: #E5E5E5;
-  --grey-whiten:  #EDF0F9;
+  --grey-whiten: #EDF0F9;
   --grey-light: #666666;
   --grey-lighter: #85859B;
   --grey-dark: #212133;
+
+  --yellow-light: #ffd12b;
+  --white: #FFFFFF;
 }
 
 :root {
@@ -163,8 +173,77 @@ button {
 
 .btn {
   border-radius: 20px;
-  background-color: var(--blue-moon);
+  background-color: rgba(63, 42, 255, 1);
   color: var(--white-snow);
+}
+
+/* effects */
+
+.header__item-link:focus {
+  color: var(--grey-whiten);
+}
+
+.header__item-link:hover {
+  color: var(--yellow-light);
+  outline: none;
+}
+.header__item-link:active {
+  color: var(--yellow-light);
+}
+
+.header__list-item .header__item-link:focus {
+  outline: 1px solid var(--grey-whiten);
+  outline-offset: 2px;
+}
+
+.header__list-item .header__item-link:active {
+  outline: 1px solid var(--yellow-light);
+  outline-offset: 2px;   
+}
+
+.hero__btn:focus {
+  color: var(--grey-whiten);
+  background-color: rgba(63, 42, 255, 0.5);
+  outline: 1px solid var(--grey-whiten);
+  outline-offset: 2px;
+}
+
+.hero__btn:hover {
+  color: var(--yellow-light);
+  outline: none;
+}
+.hero__btn:active {
+  color: var(--yellow-light);
+  outline: 1px solid var(--yellow-light); 
+  outline-offset: 2px;
+}
+
+.courses__btn:focus { 
+  color: var(--grey-whiten);
+  outline: 1px solid var(--blue-dark); 
+  outline-offset: 2px;
+}
+
+.courses__btn:hover {
+  color: var(--yellow-light);
+  outline: none;
+}
+.courses__btn:active {
+  color: var(--yellow-light);
+  outline: 1px solid var(--yellow-light); 
+  outline-offset: 2px;
+}
+
+.footer__link-logo path:focus {
+  fill: var(--yellow-light);
+}
+
+.footer__link-logo path:hover {
+  fill: var(--yellow-light);
+}
+
+.footer__link-logo path:active {
+  fill: var(--yellow-light);
 }
 
 /* header */
@@ -188,6 +267,12 @@ button {
   height: 21px;
 }
 
+.header__list-item {
+  -webkit-transition: outline .3s ease-in-out;
+  -o-transition: outline .3s ease-in-out;
+  transition: outline .3s ease-in-out;
+}
+
 .header__list-item:not(:last-child) {
   margin-right: var(--mr-medium);
 }
@@ -197,6 +282,9 @@ button {
   font-size: 18px;
   line-height: 21px;
   color: var(--white-snow);
+  -webkit-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
 }
 
 /* hero section */
@@ -237,6 +325,9 @@ button {
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
+  -webkit-transition: color .3s ease-in-out, outline .3s ease-in-out, opacity .3s ease-in-out;
+  -o-transition: color .3s ease-in-out, outline .3s ease-in-out, opacity .3s ease-in-out;
+  transition: color .3s ease-in-out, outline .3s ease-in-out, opacity .3s ease-in-out;
 }
 
 .hero-img {
@@ -336,6 +427,7 @@ button {
 }
 
 .courses__card {
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -379,6 +471,29 @@ button {
 
 .courses__btn {
   padding: 20px 60px;
+  -webkit-transition: color .3s ease-in-out, outline .3s ease-in-out;
+  -o-transition: color .3s ease-in-out, outline .3s ease-in-out;
+  transition: color .3s ease-in-out, outline .3s ease-in-out;
+}
+
+.courses__time-block {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 10px;
+  right: 10px;
+}
+
+.courses__time-txt {
+  color: var(--white);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  padding-left: 3px;
 }
 
 /* footer */
@@ -397,6 +512,12 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.footer__link-logo {
+  -webkit-transition: fill .3s ease-in-out;
+  -o-transition: fill .3s ease-in-out;
+  transition: fill .3s ease-in-out;
 }
 
 .footer__copy {
