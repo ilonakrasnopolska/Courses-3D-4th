@@ -295,12 +295,13 @@ button {
 }
 
 .hero__container {
-  padding: 15px 0;
+  padding: 15px 40px;
 }
 
 .hero-content {
   padding-top: 130px;
   padding-bottom: 130px;
+  z-index: 2;
 }
 
 .hero__title {
@@ -340,6 +341,10 @@ button {
 }
 
 /* advantages section */
+
+.advantages__container {
+  padding: 0 40px;
+}
 
 .advantages__article {
   margin-bottom: var(--mb-normal);
@@ -388,7 +393,7 @@ button {
 }
 
 .teachers__container {
-  padding: 80px 0;
+  padding: 80px 40px;
 }
 
 .teachers {
@@ -420,6 +425,10 @@ button {
 }
 
 /* courses section */
+
+.courses__container {
+  padding: 0 40px;
+}
 
 .courses__title {
   margin-bottom: var(--mb-normal);
@@ -470,7 +479,8 @@ button {
 }
 
 .courses__btn {
-  padding: 20px 60px;
+  max-width: 100%;
+  padding: 20px 50px;
   -webkit-transition: color .3s ease-in-out, outline .3s ease-in-out;
   -o-transition: color .3s ease-in-out, outline .3s ease-in-out;
   transition: color .3s ease-in-out, outline .3s ease-in-out;
